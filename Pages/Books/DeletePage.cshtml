@@ -1,0 +1,42 @@
+﻿@page
+@model WebApplicationASP.Pages.Books.DeletePageModel
+@{
+}
+<br />
+<h1> BOOKS LIST </h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>BOOK CODE</th>
+            <th>BOOK TITLE</th>
+            <th>CATEGORY</th>
+            <th>AUTHOR</th>
+            <th>PUBLICATION</th>
+            <th>PRICE</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+            <tr>
+                <td>@Model.BookCode</td>
+                <td>@Model.book.BookTitle</td>
+                <td>@Model.book.Category </td>
+                <td>@Model.book.Author</td>
+                <td>@Model.book.Publication</td>
+                <td>@Model.book.Price</td>
+            </tr>
+        
+
+    </tbody>
+</table>
+<div>
+    <h5>Confirm Your Deletion of BookCode @Model.BookCode</h5>
+    <div>
+        <form method="post">
+
+            <button type="submit" class="btn btn-primary">Yes</button>
+        </form>
+        <a href="/Books/IndexPage"<button class="btn btn-danger">No</button></a>
+
+    </div>
+</div>
